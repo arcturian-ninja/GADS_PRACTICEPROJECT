@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Smash It - Current Weather Forecast</title>
+  <meta name="description" content="Weather forecast app for Smash It Event">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Smash It Weather Forecast">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <header>
+    <div class="topbar">
+      <!--  Brand-->
+      <a class="brand" href="/">
+         Smash It<i>!</i>
+      </a>
+      
+      <!--  Search -->
+      <label for="city" style="display: none;">City Name</label>
+      <input type="search" name="city" placeholder="Enter name of city" class="searchbox" />
+    </div>
+    <nav>
+      <!-- Navbar Items -->
+      <ul class="navbar clearfix">
+        <li class="nav-item ">
+          <a href="#" class="nav-link current">Today</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Hourly</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link smooth-anchor">Daily</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="loader">
+      <div class="lds-ripple"><div></div><div></div></div>
+    </div>
+    <article>
+      <p class="location"><span></span> Weather</p>
+      <p class="datetimenow grey">as of <span ></span></p>
+      <p class="currenttemp degrees"></p>
+      <p class="description"></p>
+      <p class="extradetails">Feels like <span class="degrees"></span></p>
+       <div class="graphics clearfix">
+        <img class="weathericon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="cloudyweather" />
+        <p class="imagedetails">Humidity: <span class="humidity"></span></p>
+      </div>
+     
+    </article>
+  </main>
+  <footer>
+    <p>Smash It Weather Forecast Web App</p>
+  </footer>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/vendor/moment-with-locales.min.js"></script>
+  <script src="js/vendor/moment-timezone-with-data.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+ 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA8MQQe6FlBw_X1Xck8dARSLjWP2qMMIYQ",
+    authDomain: "smashit-weather-forecast.firebaseapp.com",
+    databaseURL: "https://smashit-weather-forecast.firebaseio.com",
+    projectId: "smashit-weather-forecast",
+    storageBucket: "smashit-weather-forecast.appspot.com",
+    messagingSenderId: "233578774620",
+    appId: "1:233578774620:web:a54d66beb7d84471f12699"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+</body>
+
+</html>
